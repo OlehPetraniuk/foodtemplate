@@ -1,0 +1,83 @@
+@import "functions";
+@import "variables";
+@import "custom";
+@import "mixins";
+
+html {
+	overflow-x: hidden;
+}
+body {
+	background: $white;
+	font-family: $font-family-sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.8;
+	color: gray('600');
+
+}
+a {
+	transition: .3s all ease;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+h1, h2, h3, h4, h5 {
+	color: $black;
+}
+.btn, .form-control {
+	outline: none;
+	box-shadow: none!important;
+	border-radius: 0px!important;
+	&:focus, &:active {
+		outline: none;
+	}
+}
+.form-control {
+	box-shadow: none!important;
+	height: 46px;
+	border-width: 1px;
+	&:active, &:focus {
+		border-color: $primary;
+	}
+}
+textarea.form-control {
+	height: inherit;
+}
+.btn {
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	&.btn-primary {
+		color: $white;
+		border-width: 2px;
+		&:hover, &:active, &:focus {
+			border-color: lighten(theme-color('primary'), 10%); 
+			background: lighten(theme-color('primary'), 10%);
+		}
+	}
+	&.btn-sm {
+		font-size: 12px;
+	}
+	&.btn-outline-primary {
+		border-width: 2px;
+		color: theme-color('primary');
+		&:hover, &:focus, &:active {
+			color: $white;
+		}
+	}
+	
+	&.btn-outline-white {
+		border-width: 2px;
+		border-color: $white;
+		color: $white;
+		&:hover, &:focus {
+			background: $white;
+			color: $black!important;
+			border-width: 2px;
+		}
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}
