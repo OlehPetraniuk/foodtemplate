@@ -1433,3 +1433,31 @@ header {
 		}
 	}
 }
+
+.search-form {
+	background: lighten($black, 97%);
+	// padding: 10px;
+
+	.form-group {
+		position: relative;
+		input {
+			// padding-right: 50px;
+		}
+	}
+	.icon {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+}
+
+.post-meta {
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	a {
+		color: $white;
+		border-bottom: 1px solid rgba($white, .5);
+	}
+}
